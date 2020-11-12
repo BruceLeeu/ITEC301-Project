@@ -22,4 +22,4 @@ You should be able to register a new user and use the website as non-admin.
 2. Go to cakeinc_db >> users and locate you user record.
 3. Change the admin column for you user from a 0 (false) to a 1 (true).
 
-</> with ❤ by Louis la Grange. 2020
+</> with ❤ by Louis la Grange © 2020
