@@ -1,0 +1,102 @@
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.section {
+  display: flex;
+  flex: 0 29%;
+  flex-direction: column;
+  border: 5px solid white;
+  color: #151515;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: 10px;
+  transition: all 0.25s ease;
+  animation: 0.25s ease shrink;
+  transform: scale(1);
+}
+
+.section:hover{
+  animation: 0.25s ease shrink;
+  transform: scale(1.05);
+}
+
+.section a {
+  text-decoration: none;
+  color: #151515;
+  transition: all 0.25s ease;
+}
+
+.section a:hover {
+  color: lightgray;
+}
+
+.section:hover {
+  padding: 0;
+  border-color: #151515;
+  background-color: #151515;
+  color: lightgray;
+}
+
+.section-picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-picture img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-title span {
+  text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .content {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    width: 90%;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

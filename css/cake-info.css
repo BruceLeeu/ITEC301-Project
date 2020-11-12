@@ -1,0 +1,115 @@
+.cakes-content {
+  width: calc(100% - 10px);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 5px 0 5px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: 5px;
+}
+
+.description span {
+  width: 100%;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.description span a {
+  font-size: x-large;
+}
+
+.cake-pic {
+  display: flex;
+  width: calc(100% - 10px);
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: 5px;
+  height: calc(100% - 10px);
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.order-options {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.order-options #amount {
+  text-align: center;
+}
+
+.order-options span {
+  text-align: center;
+}
+
+.order-options span a {
+  font-size: x-large;
+}
+
+#amount{
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+#amount:invalid{
+  border: 1px solid #ff3535;
+  box-shadow: 0 0 5px 0 #ff3535, 0 0 0 0 #ff3535;
+}
+
+.btn-order {
+  background-color: #ffff35;
+  color: #151515;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  transition: all 0.25s ease;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btn-order:hover {
+  background-color: #151515;
+  color: lightgray;
+}
+
+.error-msg{
+  color: #ff3535;
+}
+
+@media only screen and (max-width: 750px) {
+  .content {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .cakes-content {
+    flex-direction: row-reverse;
+  }
+
+  .cake-pic {
+    flex: 1 0 55%;
+    max-height: calc(95vh - 85px);
+    max-width: calc(95vh - 85px);
+  }
+}

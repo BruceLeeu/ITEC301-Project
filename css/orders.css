@@ -1,0 +1,128 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  width: 95%;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 15px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+table th {
+  background-color: #ffff35;
+  color: #151515;
+  padding: 10px;
+}
+
+tbody tr td {
+  padding: 5px;
+  border-top: 2px solid lightgray;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+table tr img {
+  padding: 5px;
+  max-width: 5rem;
+  max-height: 5rem;
+  border-radius: 15px;
+}
+
+table tr {
+  transition: all 0.25s ease;
+}
+
+tbody tr:hover {
+  transition: all 0.25s ease;
+  color: lightgray;
+  background-color: #151515;
+}
+
+td button {
+  color: #151515;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 5px;
+  transition: all 0.25s ease;
+}
+
+.paid,
+.collected {
+  border: solid 2px #ffff35;
+  background-color: #ffff35;
+}
+
+.deleteOrder {
+  border: solid 2px #ff3535;
+  background-color: #ff3535;
+}
+
+td button:disabled {
+  border: solid 2px lightgray;
+  background-color: lightgray;
+  color: #151515;
+}
+
+td button:disabled:hover {
+  background-color: lightgray;
+  color: #151515;
+  transition: all 0.25s ease;
+}
+
+td button:hover {
+  background-color: #151515;
+  color: lightgray;
+  transition: all 0.25s ease;
+}
+
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+  max-width: 500px;
+  width: 95%;
+  padding-bottom: 25px;
+}
+
+h1,
+a {
+  text-align: center;
+}
+
+.payment-details span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-details a:nth-child(odd) {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.payment-details hr {
+  width: 90%;
+  background-color: #151515;
+}

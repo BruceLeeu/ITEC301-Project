@@ -1,0 +1,218 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin-top: 75px;
+  margin-bottom: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: #ffff35;
+  z-index: 1;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.menu {
+  width: calc(100% - 150px);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-left: 150px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #151515;
+  text-transform: uppercase;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  list-style: none;
+}
+
+.logo img {
+  padding: 0 2.5rem;
+  width: auto;
+  height: 75px;
+}
+
+.menu-item {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  transition: all 0.25s ease;
+}
+
+.menu-link {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  transition: all 0.25s ease;
+}
+
+.menu-link span {
+  text-align: center;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 0;
+  right: -75px;
+  list-style: none;
+  padding: 10px;
+  height: 55px;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.menu-toggle svg {
+  height: 55px;
+}
+
+.menu-item svg {
+  height: 100%;
+}
+
+.icon-primary {
+  fill: black;
+  transition: all 0.25s ease;
+}
+
+.menu-item:hover {
+  background: #151515;
+  transition: all 0.25s ease;
+}
+
+.menu-item:hover .icon-primary {
+  fill: lightgray;
+  transition: all 0.25s ease;
+}
+
+.menu-item:hover .menu-link {
+  color: lightgray;
+  transition: all 0.25s ease;
+}
+
+.menu-toggle:hover .icon-primary {
+  fill: lightgray;
+  transition: all 0.25s ease;
+}
+
+.menu-toggle svg {
+  transform: rotate(45deg);
+  transition: all 0.25s ease;
+}
+
+.menu-toggle.active svg {
+  transform: rotate(135deg);
+  transition: all 0.25s ease;
+}
+
+.menu-link .email {
+  font-size: smaller;
+  text-transform: lowercase;
+}
+
+@media only screen and (min-width: 750px) {
+  .menu-item .menu-link .logout {
+    display: none;
+  }
+
+  .menu-item:hover .menu-link .logout {
+    display: flex;
+  }
+
+  .menu-item .menu-link .email {
+    padding: 0.1rem;
+    display: flex;
+  }
+
+  .menu-item:hover .menu-link .email {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .menu-item {
+    display: none;
+  }
+
+  .menu-toggle {
+    right: 0px;
+    transition: all 0.25s ease;
+  }
+
+  .menu.active {
+    margin-left: 0;
+    display: flex;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #151515;
+    flex-direction: column;
+  }
+
+  .menu-toggle.active .icon-primary {
+    fill: lightgray;
+  }
+
+  .menu.active .menu-item {
+    display: flex;
+    height: 20%;
+    padding: 0;
+    align-items: center;
+    border-radius: 15px;
+  }
+
+  .menu.active .menu-item:hover {
+    background: #ffff35;
+  }
+
+  .menu.active .menu-link {
+    flex-direction: row;
+    height: 85%;
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .menu.active .menu-link span {
+    margin-left: 15px;
+  }
+
+  .menu.active .menu-item .icon-primary {
+    fill: lightgray;
+  }
+
+  .menu.active .menu-item:hover .icon-primary {
+    fill: #151515;
+  }
+
+  .menu.active .menu-item:hover .link-text {
+    color: #151515;
+  }
+
+  .link-text {
+    color: lightgray;
+  }
+}

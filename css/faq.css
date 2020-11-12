@@ -1,0 +1,67 @@
+.content {
+  width: 95%;
+  margin: 0 2.5%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: 15px 0;
+  width: 100%;
+  animation: 0.25s ease shrink;
+  transform: scale(1);
+}
+
+.question:hover {
+  animation: 0.25s ease grow;
+  transform: scale(1.05);
+}
+
+.question h2 {
+  margin-bottom: 5px;
+}
+
+.question span{
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.question span a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+.question span a:hover {
+  color: #0099ff;
+  text-decoration: underline;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

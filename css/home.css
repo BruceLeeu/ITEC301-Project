@@ -1,0 +1,119 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 70vh;
+  min-height: 500px;
+  margin: 0 2.5%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  background-image: url("../assets/images/cake-cover.jpg");
+  background-size: cover;
+  background-position-x: 52%;
+  background-position-y: 30%;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px;
+}
+
+.banner h1 {
+  text-align: center;
+  color: lightgray;
+  font-weight: bold;
+  text-shadow: 2px 1px #151515;
+  padding: 25px 75px;
+}
+
+.banner a {
+  text-align: center;
+  background-color: #ffff35;
+  border-radius: 15px;
+  padding: 15px;
+  color: #151515;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: larger;
+  font-weight: bold;
+  animation: 0.25s ease shrink;
+  transform: scale(1);
+}
+
+.banner a:hover {
+  color: lightgray;
+  background-color: #151515;
+  animation: 0.25s ease grow;
+  transform: scale(1.1);
+}
+
+.section span {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  animation: 0.25s ease shrink;
+  transform: scale(1);
+}
+
+.section span:hover {
+  animation: 0.25s ease grow;
+  transform: scale(1.1);
+}
+
+.section span label {
+  font-size: larger;
+}
+
+.content {
+  width: 95%;
+  margin: 15px 2.5% 0 2.5%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.section {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section svg {
+  max-height: 2rem;
+  min-height: 2rem;
+  max-width: 2rem;
+  min-width: 2rem;
+  margin-right: 5px;
+}
+
+.section svg .icon-primary {
+  fill: #151515;
+}
+
+.section svg .icon-secondary {
+  fill: #ffff35;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
